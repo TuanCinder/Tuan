@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm MBTI</title>
+    <link rel="shortcut icon" href="Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="logo">
+                <a href="#"><img src="Logo.png" alt="Logo"></a>
+              </div>
+              <h1>Trắc nghiệm MBTI</h1>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+
+                <a href="#">About</a>
+
+                <a href="ketqua.html">Kết quả</a>
+
+                <a href="lienhe.html">Liên hệ</a>
+
+                <a href="login email.html">Đăng nhập</a>
+            
+                <a href="login email.html">Đăng ký</a>
+
+            </nav>
+
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1> Quiz</h1>
+                    <div class="quiz-header">
+                        <span>MBTI TEST </span>
+                        <span class="header-score">Total: 0 / 20</span>
+                    </div>
+ 
+                    <h2 class="question-text">Bạn có thích dành thời gian một mình để nạp lại năng lượng hay thích tham gia các hoạt động xã hội?</h2>
+                
+                    <div class="option-list">
+                        <div class="option" onclick="optionSelected(this)">
+                            <span>A.Tôi thích dành thời gian một mình để nạp lại năng lượng.</span>
+                        </div>
+                        <div class="option" onclick="optionSelected(this)">
+                            <span>B.Tôi thích tham gia các hoạt động xã hội.</span>
+                        </div>
+                        <div class="option" onclick="optionSelected(this)">
+                            <span>C.Tôi thích cả hai, dành thời gian một mình và tham gia các hoạt động xã hội.</span>
+                        </div>
+                        <div class="option" onclick="optionSelected(this)">
+                            <span>D.Tôi không có sự ưa thích đặc biệt giữa dành thời gian một mình và tham gia các hoạt động xã hội, tùy thuộc vào tâm trạng và hoàn cảnh cụ thể.</span>
+                        </div>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total"> 1 of 12 Questions </span>
+                        <button class="next-btn">Next </button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="home">
+                <div class="home-content">
+                    <h1>MBTI QUIZ</h1>
+                    <p>Trang web này cung cấp cho bạn một trắc nghiệm dựa trên hệ thống MBTI
+                        để giúp bạn hiểu rõ hơn về bản chất và cá nhân hóa của bản thân.
+                        Bấm vào nút bên dưới để bắt đầu trắc nghiệm và khám phá MBTI của bạn.</p>
+                    <button class="start-btn">Start Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-infor">
+       <h2>Quiz Guide</h2> 
+       <span class="infor">1. Kill yourself!</span>
+       <br>
+       <span class="infor">2. Kill yourself again!!</span>
+       <br>
+       <span class="infor">3. Kill yourself again and again!!!</span>
+       <br>
+       <span class="infor">4. Kill yourself again and again and again!!!!</span>
+       <br>
+       <span class="infor">5. Kill yourself again and again and
+        again and again!!!!</span>
+        <br>
+       <div class="btn-group">
+        <button class="infor-btn exit-btn">Exit Quiz</button>
+        <a href="#" class="infor-btn countinue-btn">Continue</a>
+       </div>
+    </div>  
+    
+    <script src="script.js"></script>
+    <script src="Question.js"></script>
+
+</body>
+</html>

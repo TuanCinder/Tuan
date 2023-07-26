@@ -1,0 +1,163 @@
+
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #FFA15F;
+  color: #000000;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+nav ul li a:hover, 
+.nav ul li a.active{
+  color: #fff;
+}
+
+main {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Chiếm phần còn lại của body */
+}
+
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+.image-container {
+  background-color: #FFA15F; /* Màu chủ đạo */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.image-container img {
+  width: 200px; /* Độ rộng của hình ảnh */
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #FFA15F; /* Màu chủ đạo */
+  color: #000000;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background:  #b8156e;
+}
+
+footer {
+  background-color: #FFA15F; /* Màu chủ đạo */
+  color: #000000; /* Màu chữ đen */
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto; /* Đẩy footer xuống cuối trang */
+}
+
+/* Media queries cho responsive design */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  main {
+    margin: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+.logo img {
+  padding-left: 20px;
+  width: 100px;
+  height: 100%;
+}
+
+.logo, .language {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  margin-right: 10px;
+}
+h1 {
+  flex: 1;
+  margin: 10px 10px; 
+}

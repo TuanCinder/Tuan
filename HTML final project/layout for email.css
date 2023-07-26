@@ -1,0 +1,68 @@
+/* Set up the container the leave */
+    .leaves-container{
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Style for invidual leaves */
+    .leaf{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #9ac23c00;
+        border-radius: 50%;
+        animation: falling 8s ease-in-out infinite;
+    }
+
+    /* Key frame animation for the falling leaves */
+    @keyframes falling{
+        0%{
+            transform: translateY(-10%);
+        }
+        100%{
+            transform: translateY(3220%);
+        }
+    }
+
+    /* Position each leaf randomly within the container */
+    .leaf:nth-child(1){
+        left: 5%;
+        top: -5%;
+        animation-delay: 0.5s;
+    }  
+    .leaf:nth-child(2){
+        left: 25%;
+        top: -10%;
+        animation-delay: 2s;
+    }
+    .leaf:nth-child(3){
+        left: 45%;
+        top: -15%;
+        animation-delay: 3.5s;
+    }
+    .leaf:nth-child(4){
+        left: 65%;
+        top: -20%;
+        animation-delay: 1s;
+    }
+    .leaf:nth-child(5){
+        left: 85%;
+        top: -25%;
+        animation-delay: 2.5s;
+    }
+    .leaf:nth-child(6){
+        left: 95%;
+        top: -15%;
+        animation-delay: 2.5s;
+    }
+    .leaf:nth-child(7){
+        left: 55%;
+        top: -15%;
+        animation-delay: 1.5s;
+    }
+    .leaf:nth-child(8){
+        left: 20%;
+        top: -15%;
+        animation-delay: 1.0s;
+    }

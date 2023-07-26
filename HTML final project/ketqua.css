@@ -1,0 +1,40 @@
+.mbti-results {
+    float: right;
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  .result-box {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .result-box h2 {
+    background-color: #FFA15F;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .result-list {
+    padding: 10px;
+  }
+  
+  .result-list ul {
+    list-style: none;
+  }
+  
+  .result-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  .personality-details {
+    display: none;
+  }
+  
+  .personality-content {
+    display: none;
+  }

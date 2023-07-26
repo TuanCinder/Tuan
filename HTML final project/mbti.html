@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm MBTI</title>
+    <style>
+        .main {
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s;
+        }
+
+        .quiz-container.hide {
+            opacity: 0;
+        }
+
+        .quiz-container.show {
+            opacity: 1;
+        }
+
+        .home {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s;
+        }
+
+        .home-content {
+            margin-bottom: 20px;
+        }
+
+        .popup-infor {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            display: none;
+            width: 70%;
+            max-width: 500px;
+        }
+
+        .popup-infor h2 {
+            margin-top: 0;
+        }
+
+        .infor-btn {
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .exit-btn {
+            background-color: red;
+            float: left;
+        }
+
+        .continue-btn {
+            background-color: green;
+            float: right;
+        }
+
+        .muted-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+
+        /* Additional styles for the guide and blurred main content */
+/* CSS styles */
+.popup-infor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    width: 70%;
+    max-width: 500px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.popup-infor.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+        .muted-background.show {
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+<main class="main">
+    <section class="home">
+        <div class="home-content">
+            <h2>Trắc nghiệm MBTI</h2>
+            <p>
+                Trang web này cung cấp cho bạn một trắc nghiệm dựa trên hệ thống MBTI
+                để giúp bạn hiểu rõ hơn về bản chất và cá nhân hóa của bản thân.
+                Bấm vào nút bên dưới để bắt đầu trắc nghiệm và khám phá MBTI của bạn.
+            </p>
+            <button class="button" id="start-quiz">Start Quiz</button>
+        </div>
+    </section>
+    <div class="muted-background"></div>
+    <div class="popup-infor">
+        <h2>Quiz Guide</h2>
+        <span class="infor">1. Kill yourself!!!</span><br>
+        <span class="infor">2. Kill yourself!!!</span><br>
+        <span class="infor">3. Kill yourself!!!</span><br>
+        <span class="infor">4. Kill yourself!!!</span><br>
+        <span class="infor">5. Kill yourself!!!</span>
+        <div class="btn-group">
+            <button class="infor-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="infor-btn continue-btn">Continue</a>
+        </div>
+    </div>
+    <div class="quiz-container hide">
+      <h2>Quiz Guide</h2>
+      <span class="infor">1. Kill yourself!!!</span><br>
+      <span class="infor">2. Kill yourself!!!</span><br>
+      <span class="infor">3. Kill yourself!!!</span><br>
+      <span class="infor">4. Kill yourself!!!</span><br>
+      <span class="infor">5. Kill yourself!!!</span>
+      <button class="infor-btn exit-btn">Exit Quiz</button>
+      <a href="#" class="infor-btn continue-btn">Continue</a>
+    </div>
+</main>
+<script>
+    // JavaScript code to show the quiz guide popup and quiz container when the "Start Quiz" button is clicked
+    const startQuizButton = document.getElementById('start-quiz');
+    const popupInfor = document.querySelector('.popup-infor');
+    const mutedBackground = document.querySelector('.muted-background');
+    const quizContainer = document.querySelector('.quiz-container');
+    const exitButton = document.querySelector('.exit-btn');
+    const continueButton = document.querySelector('.continue-btn');
+    const homeSection = document.querySelector('.home');
+
+// JavaScript code to show the quiz guide popup and quiz container when the "Start Quiz" button is clicked
+startQuizButton.addEventListener('click', function () {
+    popupInfor.classList.add('show');
+    mutedBackground.style.display = 'block';
+    homeSection.style.filter = 'blur(5px)';
+    quizContainer.classList.remove('hide');
+    quizContainer.classList.add('show');
+});
+
+exitButton.addEventListener('click', function () {
+    popupInfor.classList.remove('show');
+    mutedBackground.style.display = 'none';
+    homeSection.style.filter = 'none';
+    quizContainer.classList.remove('show');
+    quizContainer.classList.add('hide');
+});
+
+
+    continueButton.addEventListener('click', function () {
+        // Add code here to continue to the actual quiz
+    });
+</script>
+</body>
+</html>
